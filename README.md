@@ -2,12 +2,12 @@
 
 
 
-###  Overview
+##  Overview
 
 This repository includes PyTorch implementation and pretrained models for VGTR(Visual Grounding with TRansformers).
 
 
-### Prerequisites
+## Prerequisites
 
 - Python 3.8.3
 - Pytorch 1.7.0
@@ -15,7 +15,7 @@ This repository includes PyTorch implementation and pretrained models for VGTR(V
 - Others (OpenCV etc.)
 
 
-### Preparation
+## Preparation
 
 1. Clone this repository.
 
@@ -59,7 +59,7 @@ This repository includes PyTorch implementation and pretrained models for VGTR(V
 
 
 
-### Accuracy & Pretrained Models
+## Accuracy & Pretrained Models
 
 | Dataset           | Backbone  | Accuracy            | Pretrained Model (BaiduDrive)                                |
 | ----------------- | --------- | ------------------- | ------------------------------------------------------------ |
@@ -76,7 +76,7 @@ This repository includes PyTorch implementation and pretrained models for VGTR(V
 
 
 
-### Train
+## Train
 
 ```bash
 python main.py --gpu <gpu id> --dataset <refcoco/else> --batch_size <bs> --savename <ExpName> --backbone <resnet50/101> --cnn_path <resnet_coco_weights_path>
@@ -84,7 +84,7 @@ python main.py --gpu <gpu id> --dataset <refcoco/else> --batch_size <bs> --saven
 
 
 
-### Inference
+## Inference
 
 Download the pretrained models and put it into the folder ```./store/pretrained/```.
 
@@ -94,7 +94,7 @@ python main.py --test --gpu <gpu id> --dataset <refcoco/else> --batch_size <bs> 
 
 
 
-### References
+## References
 
 [1] Tsung-Yi Lin, Michael Maire, Serge Belongie, James Hays, Pietro Perona, Deva Ramanan, Piotr Doll´ar, and C Lawrence Zitnick. Microsoft coco: Common objects in context. In European conference on computer vision, pages 740–755. Springer, 2014.
 
@@ -102,7 +102,7 @@ python main.py --test --gpu <gpu id> --dataset <refcoco/else> --batch_size <bs> 
 
 
 
-### Acknowledgements
+## Acknowledgements
 
 Part of codes are from:
 
