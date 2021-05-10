@@ -1,1 +1,115 @@
 # vgtr
+
+
+
+###  Overview
+
+This repository includes PyTorch implementation and pretrained models for VGTR(Visual Grounding with TRansformers).
+
+
+### Prerequisites
+
+- Python 3.8.3
+- Pytorch 1.7.0
+- torchvision 0.8.1
+- Others (OpenCV etc.)
+
+
+### Preparation
+
+1. Clone this repository.
+
+2. Data preparation.
+
+   Download Flickr30K Entities from： [Flickr30k Entities (bryanplummer.com)](http://bryanplummer.com/Flickr30kEntities/) and  [Flickr30K](http://shannon.cs.illinois.edu/DenotationGraph/) 
+
+   Download MSCOCO images.
+
+   Download processed indexes from:   [zyang-ur/onestage_grounding](https://github.com/zyang-ur/onestage_grounding) 
+
+3. Download backbone weights. We use resnet-50/101 as the basic visual encoder. The weights are pretrained on MSCOCO [1]. We extract backbone weights from DETR [2]. The extracted weights can be download here (BaiduDrive):
+
+   [ResNet-50](https://pan.baidu.com/s/1ZHR_Ew8tUZH7gZo1prJThQ)(code：ru8v);  [ResNet-101](https://pan.baidu.com/s/1zsQ67cUZQ88n43-nmEjgvA)(code：0hgu).
+
+4. Organize all files like this：
+
+```bash
+.
+├── main.py
+├── store
+│   ├── data
+│   │   ├── flickr
+│   │   │   ├── corpus.pth
+│   │   │   └── flickr_train.pth
+│   │   ├── gref
+│   │   ├── gref_umd
+│	│	├── unc
+│   │   └── unc+
+│   ├── ln_data
+│   │   ├── Flickr30k
+│   │   │   └── flickr30k-images
+│   │   └── other
+│   │       └── images
+│   ├── pretrained
+│   │   └── flickr_R50.pth.tar
+│   └── pth
+│       └── resnet50_detr.pth
+└── work
+```
+
+
+
+### Accuracy & Pretrained Models
+
+| Dataset           | Backbone  | Accuracy            | Pretrained Model (BaiduDrive)                                |
+| ----------------- | --------- | ------------------- | ------------------------------------------------------------ |
+| Flickr30K Entites | Resnet50  | 74.17               | [flickr_R50.pth.tar](https://pan.baidu.com/s/1VUnxD-5pXnM7iFwIl8q9kA) code: rpdr |
+| Flickr30K Entites | Resnet101 | 75.32               | [flickr_R101.pth.tar](https://pan.baidu.com/s/10GcUFLSTei9Lwvu4e5GjrQ) code: 1igb |
+| RefCOCO           | Resnet50  | 78.70  82.09  73.31 | [refcoco_R50.pth.tar](https://pan.baidu.com/s/1GIe5OoOQOADYc1vVGcSXbw) code: xjs8 |
+| RefCOCO           | Resnet101 | 79.30  82.16  74.38 | [refcoco_R101.pth.tar](https://pan.baidu.com/s/1GL-itH93G_e3VVNUPtocSA) code: bv0z |
+| RefCOCO+          | Resnet50  | 63.57  69.65  55.33 | [refcoco+_R50.pth.tar](https://pan.baidu.com/s/1PUF8WoTrOLmYU24kgAMXKQ) code: 521n |
+| RefCOCO+          | Resnet101 | 64.40  70.85  55.84 | [refcoco+_R101.pth.tar](https://pan.baidu.com/s/1mJiA7i7-Mp5ZL5D6dEDy0g) code: vzld |
+| RefCOCOg          | Resnet50  | 62.88               | [refcocog_R50.pth.tar](https://pan.baidu.com/s/1KvDPisgSLzy8u5bIVCBiOg) code: wb3x |
+| RefCOCOg          | Resnet101 | 64.05               | [refcocog_R101.pth.tar](https://pan.baidu.com/s/13ubLIbIUA3XlhzSOjaK7dg) code: 5ok2 |
+| RefCOCOg-umd      | Resnet50  | 65.62  65.30        | [umd_R50.pth.tar](https://pan.baidu.com/s/1-PgzbA98rUOl7VJHAO-Exw) code: 9lzr |
+| RefCOCOg-umd      | Resnet101 | 66.83  67.28        | [umd_R101.pth.tar](https://pan.baidu.com/s/1JkGbYL8Of3WOVWI9QcVwhQ) code: zen0 |
+
+
+
+### Train
+
+```bash
+python main.py --gpu <gpu id> --dataset <refcoco/else> --batch_size <bs> --savename <ExpName> --backbone <resnet50/101> --cnn_path <resnet_coco_weights_path>
+```
+
+
+
+### Inference
+
+Download the pretrained models and put it into the folder ```./store/pretrained/```.
+
+```bash
+python main.py --test --gpu <gpu id> --dataset <refcoco/else> --batch_size <bs> --pretrain <pretrained_weights>
+```
+
+
+
+### References
+
+[1] Tsung-Yi Lin, Michael Maire, Serge Belongie, James Hays, Pietro Perona, Deva Ramanan, Piotr Doll´ar, and C Lawrence Zitnick. Microsoft coco: Common objects in context. In European conference on computer vision, pages 740–755. Springer, 2014.
+
+[2] Nicolas Carion, Francisco Massa, Gabriel Synnaeve, Nicolas Usunier, Alexander Kirillov, and Sergey 	Zagoruyko. End-to end object detection with transformers. In European Conference on Computer Vision, pages 213–229. Springer, 2020
+
+
+
+### Acknowledgements
+
+Part of codes are from:
+
+1. [facebookresearch/detr](https://github.com/facebookresearch/detr)；
+2. [zyang-ur/onestage_grounding](https://github.com/zyang-ur/onestage_grounding)； 
+3.  [andfoy/refer](https://github.com/andfoy/refer)；
+4. [jadore801120/attention-is-all-you-need-pytorch](https://github.com/jadore801120/attention-is-all-you-need-pytorch).
+
+ 
+
