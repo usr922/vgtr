@@ -25,7 +25,7 @@ This repository includes PyTorch implementation and pretrained models for VGTR(V
 
    Download MSCOCO images.
 
-   Download processed indexes from:   [zyang-ur/onestage_grounding](https://github.com/zyang-ur/onestage_grounding) 
+   Download processed indexes by running ```download_data.sh```.
 
 3. Download backbone weights. We use resnet-50/101 as the basic visual encoder. The weights are pretrained on MSCOCO [1]. We extract backbone weights from DETR [2]. The extracted weights can be download here (BaiduDrive):
 
