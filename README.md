@@ -15,6 +15,7 @@ This repository includes PyTorch implementation and pretrained models for VGTR(V
 - Others (OpenCV etc.)
 
 
+
 ## Preparation
 
 1. Clone this repository.
@@ -59,6 +60,7 @@ This repository includes PyTorch implementation and pretrained models for VGTR(V
 
 
 
+
 ## Accuracy & Pretrained Models
 
 | Dataset           | Backbone  | Accuracy            | Pretrained Model (BaiduDrive)                                |
@@ -76,11 +78,13 @@ This repository includes PyTorch implementation and pretrained models for VGTR(V
 
 
 
+
 ## Train
 
 ```bash
 python main.py --gpu <gpu id> --dataset <refcoco/else> --batch_size <bs> --savename <ExpName> --backbone <resnet50/101> --cnn_path <resnet_coco_weights_path>
 ```
+
 
 
 
@@ -94,11 +98,13 @@ python main.py --test --gpu <gpu id> --dataset <refcoco/else> --batch_size <bs> 
 
 
 
+
 ## References
 
 [1] Tsung-Yi Lin, Michael Maire, Serge Belongie, James Hays, Pietro Perona, Deva Ramanan, Piotr Doll´ar, and C Lawrence Zitnick. Microsoft coco: Common objects in context. In European conference on computer vision, pages 740–755. Springer, 2014.
 
 [2] Nicolas Carion, Francisco Massa, Gabriel Synnaeve, Nicolas Usunier, Alexander Kirillov, and Sergey 	Zagoruyko. End-to end object detection with transformers. In European Conference on Computer Vision, pages 213–229. Springer, 2020
+
 
 
 
