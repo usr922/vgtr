@@ -180,51 +180,6 @@ def train(args):
     print(f'Best Acc: {best_accu}.')
 
 
-def val(args):
-
-    # Dataset
-    train_loader = get_train_loader(args)
-    val_loader = get_val_loader(args)
-
-    # model
-    model = GroundingModel(args)
-    model = torch.nn.DataParallel(model).cuda()
-    logging.info(model)
-
-    if args.pretrain:
-        if os.path.isfile(args.pretrain):
-            pretrained_dict = torch.load(args.pretrain)['state_dict']
-            model_dict = model.state_dict()
-            pretrained_dict = {k: v for k, v in pretrained_dict.items() if k in model_dict}
-            assert (len([k for k, v in pretrained_dict.items()]) != 0)
-            model_dict.update(pretrained_dict)
-            model.load_state_dict(model_dict)
-            print("=> loaded pretrain model at {}".format(args.pretrain))
-            logging.info("=> loaded pretrain model at {}".format(args.pretrain))
-        else:
-            print(("=> no pretrained file found at '{}'".format(args.pretrain)))
-            logging.info("=> no pretrained file found at '{}'".format(args.pretrain))
-    if args.resume:
-        if os.path.isfile(args.resume):
-            print(("=> loading checkpoint '{}'".format(args.resume)))
-            logging.info("=> loading checkpoint '{}'".format(args.resume))
-            checkpoint = torch.load(args.resume)
-            args.start_epoch = checkpoint['epoch']
-            best_loss = checkpoint['best_loss']
-            model.load_state_dict(checkpoint['state_dict'])
-            print(("=> loaded checkpoint (epoch {}) Loss{}".format(checkpoint['epoch'], best_loss)))
-            logging.info("=> loaded checkpoint (epoch {}) Loss{}".format(checkpoint['epoch'], best_loss))
-        else:
-            print(("=> no checkpoint found at '{}'".format(args.resume)))
-            logging.info(("=> no checkpoint found at '{}'".format(args.resume)))
-
-
-    model.eval()
-    accu_new, miou_new = validate_epoch(args, val_loader, model, 0, args.size)
-
-    print(f'accu: {accu_new}, miou: {miou_new}. ')
-
-
 def test(args):
 
     # Dataset
