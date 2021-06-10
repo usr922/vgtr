@@ -9,8 +9,8 @@ This repository includes PyTorch implementation and pretrained models for VGTR(V
 
 ## Prerequisites
 
-- Python 3.8.3
-- Pytorch 1.7.0
+- Python 3
+- Pytorch 1.6.0
 - torchvision 0.8.1
 - Others (OpenCV etc.)
 
@@ -24,9 +24,10 @@ This repository includes PyTorch implementation and pretrained models for VGTR(V
 
    Download Flickr30K Entities from： [Flickr30k Entities (bryanplummer.com)](http://bryanplummer.com/Flickr30kEntities/) and  [Flickr30K](http://shannon.cs.illinois.edu/DenotationGraph/) 
 
-   Download MSCOCO images.
+   Download MSCOCO images from [MSCOCO](http://images.cocodataset.org/zips/train2014.zip)
 
-   Download processed indexes by running ```download_data.sh```.
+   Download processed indexes from [Gdrive](https://drive.google.com/drive/folders/1cZI562MABLtAzM6YU4WmKPFFguuVr0lZ?usp=drive_open), process by [zyang-ur
+](https://github.com/zyang-ur/onestage_grounding).
 
 3. Download backbone weights. We use resnet-50/101 as the basic visual encoder. The weights are pretrained on MSCOCO [1]. We extract backbone weights from DETR [2]. The extracted weights can be download here (BaiduDrive):
 
