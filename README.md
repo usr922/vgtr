@@ -29,7 +29,7 @@ This repository includes PyTorch implementation and pretrained models for VGTR(V
    Download processed indexes from [Gdrive](https://drive.google.com/drive/folders/1cZI562MABLtAzM6YU4WmKPFFguuVr0lZ?usp=drive_open), process by [zyang-ur
 ](https://github.com/zyang-ur/onestage_grounding).
 
-3. Download backbone weights. We use resnet-50/101 as the basic visual encoder. The weights are pretrained on MSCOCO [1]. We extract backbone weights from DETR [2]. The extracted weights can be download here (BaiduDrive):
+3. Download backbone weights. We use resnet-50/101 as the basic visual encoder. The weights are pretrained on MSCOCO [1]. You can be download them here (BaiduDrive):
 
    [ResNet-50](https://pan.baidu.com/s/1ZHR_Ew8tUZH7gZo1prJThQ)(code：ru8v);  [ResNet-101](https://pan.baidu.com/s/1zsQ67cUZQ88n43-nmEjgvA)(code：0hgu).
 
@@ -44,7 +44,7 @@ This repository includes PyTorch implementation and pretrained models for VGTR(V
 │   │   │   ├── corpus.pth
 │   │   │   └── flickr_train.pth
 │   │   ├── gref
-│   │   ├── gref_umd
+│   │   └──  gref_umd
 │	│	├── unc
 │   │   └── unc+
 │   ├── ln_data
@@ -115,8 +115,5 @@ Part of codes are from:
 
 1. [facebookresearch/detr](https://github.com/facebookresearch/detr)；
 2. [zyang-ur/onestage_grounding](https://github.com/zyang-ur/onestage_grounding)； 
-3.  [andfoy/refer](https://github.com/andfoy/refer)；
+3. [andfoy/refer](https://github.com/andfoy/refer)；
 4. [jadore801120/attention-is-all-you-need-pytorch](https://github.com/jadore801120/attention-is-all-you-need-pytorch).
-
- 
-
