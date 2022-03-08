@@ -1,4 +1,4 @@
-# vgtr
+# VGTR
 
 
 
@@ -22,44 +22,44 @@ This repository includes PyTorch implementation and pretrained models for VGTR(*
 
 ## Preparation
 
-1. Clone this repository.
+   1. Clone this repository.
 
-2. Data preparation.
+   2. Data preparation.
 
-   Download Flickr30K Entities from [Flickr30k Entities (bryanplummer.com)](http://bryanplummer.com/Flickr30kEntities/) and  [Flickr30K](http://shannon.cs.illinois.edu/DenotationGraph/) 
+      Download Flickr30K Entities from [Flickr30k Entities (bryanplummer.com)](http://bryanplummer.com/Flickr30kEntities/) and  [Flickr30K](http://shannon.cs.illinois.edu/DenotationGraph/) 
 
-   Download MSCOCO images from [MSCOCO](http://images.cocodataset.org/zips/train2014.zip)
+      Download MSCOCO images from [MSCOCO](http://images.cocodataset.org/zips/train2014.zip)
 
-   Download processed indexes from [Gdrive](https://drive.google.com/drive/folders/1cZI562MABLtAzM6YU4WmKPFFguuVr0lZ?usp=drive_open), process by [zyang-ur
-](https://github.com/zyang-ur/onestage_grounding).
+      Download processed indexes from [Gdrive](https://drive.google.com/drive/folders/1cZI562MABLtAzM6YU4WmKPFFguuVr0lZ?usp=drive_open), process by [zyang-ur
+   ](https://github.com/zyang-ur/onestage_grounding).
 
-3. Download backbone weights. We use resnet-50/101 as the basic visual encoder. The weights are pretrained on MSCOCO [1], and can be downloaded here (BaiduDrive):
+   3. Download backbone weights. We use resnet-50/101 as the basic visual encoder. The weights are pretrained on MSCOCO [1], and can be downloaded here (BaiduDrive):
 
-   [ResNet-50](https://pan.baidu.com/s/1ZHR_Ew8tUZH7gZo1prJThQ)(code：ru8v);  [ResNet-101](https://pan.baidu.com/s/1zsQ67cUZQ88n43-nmEjgvA)(code：0hgu).
+      [ResNet-50](https://pan.baidu.com/s/1ZHR_Ew8tUZH7gZo1prJThQ)(code：ru8v);  [ResNet-101](https://pan.baidu.com/s/1zsQ67cUZQ88n43-nmEjgvA)(code：0hgu).
 
-4. Organize all files like this：
+   4. Organize all files like this：
 
-```bash
-.
-├── main.py
-├── store
-│   ├── data
-│   │   ├── flickr
-│   │   │   ├── corpus.pth
-│   │   │   └── flickr_train.pth
-│   │   ├── gref
-│   │   └── gref_umd
-│   ├── ln_data
-│   │   ├── Flickr30k
-│   │   │   └── flickr30k-images
-│   │   └── other
-│   │       └── images
-│   ├── pretrained
-│   │   └── flickr_R50.pth.tar
-│   └── pth
-│       └── resnet50_detr.pth
-└── work
-```
+   ```bash
+   .
+   ├── main.py
+   ├── store
+   │   ├── data
+   │   │   ├── flickr
+   │   │   │   ├── corpus.pth
+   │   │   │   └── flickr_train.pth
+   │   │   ├── gref
+   │   │   └── gref_umd
+   │   ├── ln_data
+   │   │   ├── Flickr30k
+   │   │   │   └── flickr30k-images
+   │   │   └── other
+   │   │       └── images
+   │   ├── pretrained
+   │   │   └── flickr_R50.pth.tar
+   │   └── pth
+   │       └── resnet50_detr.pth
+   └── work
+   ```
 
 
 
@@ -84,40 +84,40 @@ This repository includes PyTorch implementation and pretrained models for VGTR(*
 
 ## Train
 
-```bash
-python main.py \
-   --gpu $gpu_id \
-   --dataset [refcoco | refcoco+ | else] \
-   --batch_size $bs \
-   --savename $exp_name \
-   --backbone [resnet50 | resnet101] \
-   --cnn_path $resnet_coco_weight_path
-```
+   ```bash
+   python main.py \
+      --gpu $gpu_id \
+      --dataset [refcoco | refcoco+ | else] \
+      --batch_size $bs \
+      --savename $exp_name \
+      --backbone [resnet50 | resnet101] \
+      --cnn_path $resnet_coco_weight_path
+   ```
 
 
 
 
 ## Inference
 
-Download the pretrained models and put it into the folder ```./store/pretrained/```.
+   Download the pretrained models and put it into the folder ```./store/pretrained/```.
 
-```bash
-python main.py \
-   --test \
-   --gpu $gpu_id \
-   --dataset [refcoco | refcoco+ | else] \
-   --batch_size $bs \
-   --pretrain $pretrained_weight_path
-```
+   ```bash
+   python main.py \
+      --test \
+      --gpu $gpu_id \
+      --dataset [refcoco | refcoco+ | else] \
+      --batch_size $bs \
+      --pretrain $pretrained_weight_path
+   ```
 
 
 
 
 ## References
 
-[1] Tsung-Yi Lin, Michael Maire, Serge Belongie, James Hays, Pietro Perona, Deva Ramanan, Piotr Doll´ar, and C Lawrence Zitnick. Microsoft coco: Common objects in context. In European conference on computer vision, pages 740–755. Springer, 2014.
+   [1] Tsung-Yi Lin, Michael Maire, Serge Belongie, James Hays, Pietro Perona, Deva Ramanan, Piotr Doll´ar, and C Lawrence Zitnick. Microsoft coco: Common objects in context. In European conference on computer vision, pages 740–755. Springer, 2014.
 
-[2] Nicolas Carion, Francisco Massa, Gabriel Synnaeve, Nicolas Usunier, Alexander Kirillov, and Sergey 	Zagoruyko. End-to end object detection with transformers. In European Conference on Computer Vision, pages 213–229. Springer, 2020
+   [2] Nicolas Carion, Francisco Massa, Gabriel Synnaeve, Nicolas Usunier, Alexander Kirillov, and Sergey 	Zagoruyko. End-to end object detection with transformers. In European Conference on Computer Vision, pages 213–229. Springer, 2020
 
 
 
@@ -126,7 +126,19 @@ python main.py \
 
 Part of codes are from:
 
-1. [facebookresearch/detr](https://github.com/facebookresearch/detr)；
-2. [zyang-ur/onestage_grounding](https://github.com/zyang-ur/onestage_grounding)； 
-3. [andfoy/refer](https://github.com/andfoy/refer)；
-4. [jadore801120/attention-is-all-you-need-pytorch](https://github.com/jadore801120/attention-is-all-you-need-pytorch).
+   1. [facebookresearch/detr](https://github.com/facebookresearch/detr)；
+   2. [zyang-ur/onestage_grounding](https://github.com/zyang-ur/onestage_grounding)； 
+   3. [andfoy/refer](https://github.com/andfoy/refer)；
+   4. [jadore801120/attention-is-all-you-need-pytorch](https://github.com/jadore801120/attention-is-all-you-need-pytorch).
+
+
+## Citation
+   ```
+   @article{du2021visual,
+     title={Visual grounding with transformers},
+     author={Du, Ye and Fu, Zehua and Liu, Qingjie and Wang, Yunhong},
+     journal={arXiv preprint arXiv:2105.04281},
+     year={2021}
+   }
+
+   ```
