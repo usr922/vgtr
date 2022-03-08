@@ -14,9 +14,9 @@ This repository includes PyTorch implementation and pretrained models for VGTR(*
 ## Prerequisites
 
 - Python 3.6
-- Pytorch>1.6.0
-- torchvision>0.8.0
-- Others (OpenCV etc.)
+- Pytorch>=1.6.0
+- torchvision
+- others (opencv-python etc.)
 
 
 
@@ -89,7 +89,7 @@ python main.py \
    --gpu $gpu_id \
    --dataset [refcoco | refcoco+ | else] \
    --batch_size $bs \
-   --savename $ExpName \
+   --savename $exp_name \
    --backbone [resnet50 | resnet101] \
    --cnn_path $resnet_coco_weight_path
 ```
