@@ -10,9 +10,9 @@ This repository includes PyTorch implementation and pretrained models for VGTR(V
 
 ## Prerequisites
 
-- Python 3
-- Pytorch 1.6.0
-- torchvision 0.8.1
+- Python 3.6
+- Pytorch>1.6.0
+- torchvision>0.8.0
 - Others (OpenCV etc.)
 
 
