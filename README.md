@@ -6,7 +6,7 @@
 
 This repository includes PyTorch implementation and pretrained models for VGTR(Visual Grounding with TRansformers).
 
-[[ArXiv](https://arxiv.org/abs/2105.04281)]
+[[arXiv](https://arxiv.org/abs/2105.04281)]
 
 <img width="805" alt="图片" src="https://user-images.githubusercontent.com/83934424/157177788-534d16e8-c91c-432d-8939-213c7f3065a2.png">
 
