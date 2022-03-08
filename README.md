@@ -26,7 +26,7 @@ This repository includes PyTorch implementation and pretrained models for VGTR(*
 
 2. Data preparation.
 
-   Download Flickr30K Entities from： [Flickr30k Entities (bryanplummer.com)](http://bryanplummer.com/Flickr30kEntities/) and  [Flickr30K](http://shannon.cs.illinois.edu/DenotationGraph/) 
+   Download Flickr30K Entities from [Flickr30k Entities (bryanplummer.com)](http://bryanplummer.com/Flickr30kEntities/) and  [Flickr30K](http://shannon.cs.illinois.edu/DenotationGraph/) 
 
    Download MSCOCO images from [MSCOCO](http://images.cocodataset.org/zips/train2014.zip)
 
