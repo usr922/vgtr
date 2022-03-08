@@ -16,6 +16,7 @@ This repository includes PyTorch implementation and pretrained models of VGTR(**
 - Python 3.6
 - Pytorch>=1.6.0
 - torchvision
+- CUDA>=9.0
 - others (opencv-python etc.)
 
 
