@@ -85,7 +85,7 @@ This repository includes PyTorch implementation and pretrained models of VGTR(**
 
 ## Train
 
-   ```bash
+   ```
    python main.py \
       --gpu $gpu_id \
       --dataset $[refcoco | refcoco+ | else] \
@@ -102,7 +102,7 @@ This repository includes PyTorch implementation and pretrained models of VGTR(**
 
    Download the pretrained models and put it into the folder ```./store/pretrained/```.
 
-   ```bash
+   ```
    python main.py \
       --test \
       --gpu $gpu_id \
