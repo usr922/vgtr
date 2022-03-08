@@ -1,7 +1,6 @@
 # VGTR
 
 
-
 ##  Overview
 
 This repository includes PyTorch implementation and pretrained models of VGTR(**V**isual **G**rounding with **TR**ansformers).
@@ -18,7 +17,6 @@ This repository includes PyTorch implementation and pretrained models of VGTR(**
 - torchvision
 - CUDA>=9.0
 - others (opencv-python etc.)
-
 
 
 ## Preparation
@@ -63,8 +61,6 @@ This repository includes PyTorch implementation and pretrained models of VGTR(**
    ```
 
 
-
-
 ## Model Zoo
 
 | Dataset           | Backbone  | Accuracy            | Pretrained Model (BaiduDrive)                                |
@@ -81,8 +77,6 @@ This repository includes PyTorch implementation and pretrained models of VGTR(**
 | RefCOCOg-umd      | Resnet101 | 66.83  67.28        | [umd_R101.pth.tar](https://pan.baidu.com/s/1JkGbYL8Of3WOVWI9QcVwhQ) code: zen0 |
 
 
-
-
 ## Train
 
    ```
@@ -94,9 +88,7 @@ This repository includes PyTorch implementation and pretrained models of VGTR(**
       --backbone $[resnet50 | resnet101] \
       --cnn_path $resnet_coco_weight_path
    ```
-
-
-
+   
 
 ## Inference
 
@@ -111,18 +103,6 @@ This repository includes PyTorch implementation and pretrained models of VGTR(**
       --pretrain $pretrained_weight_path
    ```
 
-
-
-
-## References
-
-   [1] Tsung-Yi Lin, Michael Maire, Serge Belongie, James Hays, Pietro Perona, Deva Ramanan, Piotr Doll´ar, and C Lawrence Zitnick. Microsoft coco: Common objects in context. In European conference on computer vision, pages 740–755. Springer, 2014.
-
-   [2] Nicolas Carion, Francisco Massa, Gabriel Synnaeve, Nicolas Usunier, Alexander Kirillov, and Sergey 	Zagoruyko. End-to end object detection with transformers. In European Conference on Computer Vision, pages 213–229. Springer, 2020
-
-
-
-
 ## Acknowledgements
 
 Part of codes are from:
@@ -131,6 +111,13 @@ Part of codes are from:
    2. [zyang-ur/onestage_grounding](https://github.com/zyang-ur/onestage_grounding)； 
    3. [andfoy/refer](https://github.com/andfoy/refer)；
    4. [jadore801120/attention-is-all-you-need-pytorch](https://github.com/jadore801120/attention-is-all-you-need-pytorch).
+
+
+## References
+
+   [1] Tsung-Yi Lin, Michael Maire, Serge Belongie, James Hays, Pietro Perona, Deva Ramanan, Piotr Doll´ar, and C Lawrence Zitnick. Microsoft coco: Common objects in context. In European conference on computer vision, pages 740–755. Springer, 2014.
+
+   [2] Nicolas Carion, Francisco Massa, Gabriel Synnaeve, Nicolas Usunier, Alexander Kirillov, and Sergey 	Zagoruyko. End-to end object detection with transformers. In European Conference on Computer Vision, pages 213–229. Springer, 2020
 
 
 ## Citation
