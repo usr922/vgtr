@@ -102,7 +102,7 @@ Download the pretrained models and put it into the folder ```./store/pretrained/
 
 ```bash
 python main.py \
-   --test 
+   --test \
    --gpu $gpu_id \
    --dataset [refcoco | refcoco+ | else] \
    --batch_size $bs \
