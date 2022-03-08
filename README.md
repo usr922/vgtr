@@ -4,7 +4,7 @@
 
 ##  Overview
 
-This repository includes PyTorch implementation and pretrained models for VGTR(**V**isual **G**rounding with **TR**ansformers).
+This repository includes PyTorch implementation and pretrained models of VGTR(**V**isual **G**rounding with **TR**ansformers).
 
 [[arXiv](https://arxiv.org/abs/2105.04281)]
 
