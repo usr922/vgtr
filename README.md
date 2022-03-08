@@ -48,8 +48,8 @@ This repository includes PyTorch implementation and pretrained models for VGTR(V
 │   │   │   ├── corpus.pth
 │   │   │   └── flickr_train.pth
 │   │   ├── gref
-│   │   └──  gref_umd
-│	│	├── unc
+│   │   └── gref_umd
+│	 │	  ├── unc
 │   │   └── unc+
 │   ├── ln_data
 │   │   ├── Flickr30k
