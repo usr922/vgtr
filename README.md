@@ -66,7 +66,7 @@ This repository includes PyTorch implementation and pretrained models for VGTR(V
 
 
 
-## Accuracy & Pretrained Models
+## Model Zoo
 
 | Dataset           | Backbone  | Accuracy            | Pretrained Model (BaiduDrive)                                |
 | ----------------- | --------- | ------------------- | ------------------------------------------------------------ |
