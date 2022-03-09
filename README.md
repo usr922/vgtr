@@ -3,7 +3,7 @@
 
 ##  Overview
 
-This repository includes PyTorch implementation and pretrained models of VGTR(**V**isual **G**rounding with **TR**ansformers).
+This repository includes PyTorch implementation and trained models of VGTR(**V**isual **G**rounding with **TR**ansformers).
 
 [[arXiv](https://arxiv.org/abs/2105.04281)]
 
@@ -12,8 +12,8 @@ This repository includes PyTorch implementation and pretrained models of VGTR(**
 
 ## Prerequisites
 
-- Python 3.6
-- Pytorch>=1.6.0
+- python 3.6
+- pytorch>=1.6.0
 - torchvision
 - CUDA>=9.0
 - others (opencv-python etc.)
@@ -32,7 +32,7 @@ This repository includes PyTorch implementation and pretrained models of VGTR(**
       Download processed indexes from [Gdrive](https://drive.google.com/drive/folders/1cZI562MABLtAzM6YU4WmKPFFguuVr0lZ?usp=drive_open), process by [zyang-ur
    ](https://github.com/zyang-ur/onestage_grounding).
 
-   3. Download backbone weights. We use resnet-50/101 as the basic visual encoder. The weights are pretrained on MSCOCO [1], and can be downloaded here (BaiduDrive):
+   3. Download backbone weights. We use resnet-50/101 as the basic visual encoder. The weights are pretrained on MSCOCO, and can be downloaded here (BaiduDrive):
 
       [ResNet-50](https://pan.baidu.com/s/1ZHR_Ew8tUZH7gZo1prJThQ)(code：ru8v);  [ResNet-101](https://pan.baidu.com/s/1zsQ67cUZQ88n43-nmEjgvA)(code：0hgu).
 
@@ -113,15 +113,7 @@ Part of codes are from:
    4. [jadore801120/attention-is-all-you-need-pytorch](https://github.com/jadore801120/attention-is-all-you-need-pytorch).
 
 
-   
-## References
-
-   [1] Tsung-Yi Lin, Michael Maire, Serge Belongie, James Hays, Pietro Perona, Deva Ramanan, Piotr Doll´ar, and C Lawrence Zitnick. Microsoft coco: Common objects in context. In European conference on computer vision, pages 740–755. Springer, 2014.
-
-   [2] Nicolas Carion, Francisco Massa, Gabriel Synnaeve, Nicolas Usunier, Alexander Kirillov, and Sergey 	Zagoruyko. End-to end object detection with transformers. In European Conference on Computer Vision, pages 213–229. Springer, 2020
-
-
-
+ 
 ## Citation
    ```
    @article{du2021visual,
