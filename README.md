@@ -63,18 +63,18 @@ This repository includes PyTorch implementation and trained models of VGTR(**V**
 
 ## Model Zoo
 
-| Dataset           | Backbone  | Accuracy            | Pretrained Model (BaiduDrive)                                |
-| ----------------- | --------- | ------------------- | ------------------------------------------------------------ |
-| Flickr30K Entites | Resnet50  | 74.17               | [flickr_R50.pth.tar](https://pan.baidu.com/s/1VUnxD-5pXnM7iFwIl8q9kA) code: rpdr |
-| Flickr30K Entites | Resnet101 | 75.32               | [flickr_R101.pth.tar](https://pan.baidu.com/s/10GcUFLSTei9Lwvu4e5GjrQ) code: 1igb |
-| RefCOCO           | Resnet50  | 78.70  82.09  73.31 | [refcoco_R50.pth.tar](https://pan.baidu.com/s/1GIe5OoOQOADYc1vVGcSXbw) code: xjs8 |
-| RefCOCO           | Resnet101 | 79.30  82.16  74.38 | [refcoco_R101.pth.tar](https://pan.baidu.com/s/1GL-itH93G_e3VVNUPtocSA) code: bv0z |
-| RefCOCO+          | Resnet50  | 63.57  69.65  55.33 | [refcoco+_R50.pth.tar](https://pan.baidu.com/s/1PUF8WoTrOLmYU24kgAMXKQ) code: 521n |
-| RefCOCO+          | Resnet101 | 64.40  70.85  55.84 | [refcoco+_R101.pth.tar](https://pan.baidu.com/s/1mJiA7i7-Mp5ZL5D6dEDy0g) code: vzld |
-| RefCOCOg          | Resnet50  | 62.88               | [refcocog_R50.pth.tar](https://pan.baidu.com/s/1KvDPisgSLzy8u5bIVCBiOg) code: wb3x |
-| RefCOCOg          | Resnet101 | 64.05               | [refcocog_R101.pth.tar](https://pan.baidu.com/s/13ubLIbIUA3XlhzSOjaK7dg) code: 5ok2 |
-| RefCOCOg-umd      | Resnet50  | 65.62  65.30        | [umd_R50.pth.tar](https://pan.baidu.com/s/1-PgzbA98rUOl7VJHAO-Exw) code: 9lzr |
-| RefCOCOg-umd      | Resnet101 | 66.83  67.28        | [umd_R101.pth.tar](https://pan.baidu.com/s/1JkGbYL8Of3WOVWI9QcVwhQ) code: zen0 |
+   | Dataset           | Backbone  | Accuracy            | Pretrained Model (BaiduDrive)                                |
+   | ----------------- | --------- | ------------------- | ------------------------------------------------------------ |
+   | Flickr30K Entites | Resnet50  | 74.17               | [flickr_R50.pth.tar](https://pan.baidu.com/s/1VUnxD-5pXnM7iFwIl8q9kA) code: rpdr |
+   | Flickr30K Entites | Resnet101 | 75.32               | [flickr_R101.pth.tar](https://pan.baidu.com/s/10GcUFLSTei9Lwvu4e5GjrQ) code: 1igb |
+   | RefCOCO           | Resnet50  | 78.70  82.09  73.31 | [refcoco_R50.pth.tar](https://pan.baidu.com/s/1GIe5OoOQOADYc1vVGcSXbw) code: xjs8 |
+   | RefCOCO           | Resnet101 | 79.30  82.16  74.38 | [refcoco_R101.pth.tar](https://pan.baidu.com/s/1GL-itH93G_e3VVNUPtocSA) code: bv0z |
+   | RefCOCO+          | Resnet50  | 63.57  69.65  55.33 | [refcoco+_R50.pth.tar](https://pan.baidu.com/s/1PUF8WoTrOLmYU24kgAMXKQ) code: 521n |
+   | RefCOCO+          | Resnet101 | 64.40  70.85  55.84 | [refcoco+_R101.pth.tar](https://pan.baidu.com/s/1mJiA7i7-Mp5ZL5D6dEDy0g) code: vzld |
+   | RefCOCOg          | Resnet50  | 62.88               | [refcocog_R50.pth.tar](https://pan.baidu.com/s/1KvDPisgSLzy8u5bIVCBiOg) code: wb3x |
+   | RefCOCOg          | Resnet101 | 64.05               | [refcocog_R101.pth.tar](https://pan.baidu.com/s/13ubLIbIUA3XlhzSOjaK7dg) code: 5ok2 |
+   | RefCOCOg-umd      | Resnet50  | 65.62  65.30        | [umd_R50.pth.tar](https://pan.baidu.com/s/1-PgzbA98rUOl7VJHAO-Exw) code: 9lzr |
+   | RefCOCOg-umd      | Resnet101 | 66.83  67.28        | [umd_R101.pth.tar](https://pan.baidu.com/s/1JkGbYL8Of3WOVWI9QcVwhQ) code: zen0 |
 
 
 ## Train
