@@ -1,4 +1,4 @@
-# VGTR
+# Visual Grounding with Transformers
 
 
 ##  Overview
