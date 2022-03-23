@@ -85,7 +85,7 @@ This repository includes PyTorch implementation and trained models of VGTR(**V**
    ```
    python main.py \
       --gpu $gpu_id \
-      --dataset $[refcoco | refcoco+ | else] \
+      --dataset $[refcoco | refcoco+ | others] \
       --batch_size $bs \
       --savename $exp_name \
       --backbone $[resnet50 | resnet101] \
@@ -101,7 +101,7 @@ This repository includes PyTorch implementation and trained models of VGTR(**V**
    python main.py \
       --test \
       --gpu $gpu_id \
-      --dataset $[refcoco | refcoco+ | else] \
+      --dataset $[refcoco | refcoco+ | others] \
       --batch_size $bs \
       --pretrain $pretrained_weight_path
    ```
