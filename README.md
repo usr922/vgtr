@@ -125,5 +125,12 @@ Part of codes are from:
      journal={arXiv preprint arXiv:2105.04281},
      year={2021}
    }
+   
+   @inproceedings{du2022visual,
+     title={Visual grounding with transformers},
+     author={Du, Ye and Fu, Zehua and Liu, Qingjie and Wang, Yunhong},
+     booktitle={Proceedings of the International Conference on Multimedia and Expo},
+     year={2022}
+   }
    ```
    
